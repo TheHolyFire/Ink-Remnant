@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Currency" format=3 uid="uid://xdaxoyxe6ppf"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_ftikv"]
+[ext_resource type="Resource" uid="uid://bgdqsv5fi4k3a" path="res://Currencies/Coins/Coins.tres" id="2_de6uc"]
+
+[resource]
+script = ExtResource("1_ftikv")
+name = "Octagon of Financial Success"
+max_amount = 1
+is_ticker = true
+tick_types = Dictionary[Object, int]({
+ExtResource("2_de6uc"): 8
+})
+makes_label = false
+metadata/_custom_type_script = "uid://4goxmvo7g0yf"

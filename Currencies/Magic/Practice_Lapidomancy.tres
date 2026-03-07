@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://dvw4nmj664lii"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_y0csl"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="2_50qla"]
+[ext_resource type="Resource" uid="uid://b481l10tmoxct" path="res://Currencies/Crystal/Crystal.tres" id="2_vonv7"]
+[ext_resource type="Resource" uid="uid://bgk58kkborrcp" path="res://Currencies/Magic/Lapidomantic_Principles.tres" id="3_50oar"]
+[ext_resource type="Resource" uid="uid://bmq15p01csdrq" path="res://Currencies/Magic/Magic.tres" id="4_nh56p"]
+
+[resource]
+script = ExtResource("2_50qla")
+job_name = "Gather gemcutting magic"
+job_desc = "Lapidomancy is finnicky, painstaking work."
+job_story = "When you're done, you're tired and frustrated. But you feel slightly more powerful. "
+job_duration = 2
+job_reward = Dictionary[ExtResource("1_y0csl"), int]({
+ExtResource("4_nh56p"): 2
+})
+job_cost = Dictionary[ExtResource("1_y0csl"), int]({
+ExtResource("2_vonv7"): 1
+})
+job_mask = Dictionary[ExtResource("1_y0csl"), int]({
+ExtResource("3_50oar"): 1
+})
+metadata/_custom_type_script = "uid://chnttjydh538r"

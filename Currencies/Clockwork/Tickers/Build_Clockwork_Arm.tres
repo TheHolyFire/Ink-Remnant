@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://bwyl0v6m00mg4"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_ch2am"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="2_jiyvl"]
+[ext_resource type="Resource" uid="uid://buakd3dxh85m5" path="res://Currencies/Clockwork/Clockwork.tres" id="2_jtqo8"]
+[ext_resource type="Resource" uid="uid://dey0n8ex4ljnh" path="res://Currencies/Clockwork/Upgrades/Clock.tres" id="3_xk1en"]
+[ext_resource type="Resource" uid="uid://s7moftfa1cc4" path="res://Currencies/Clockwork/Tickers/Clockwork_Arm.tres" id="4_gi3a3"]
+[ext_resource type="Resource" uid="uid://eynuhxro6yab" path="res://Currencies/Houses/Floor_Space.tres" id="5_u40kl"]
+
+[resource]
+script = ExtResource("2_jiyvl")
+job_name = "Build a clockwork arm"
+job_desc = "You see potential in scattered pieces..."
+job_story = "It's weak, but it can sort trash!"
+job_duration = 8
+job_reward = Dictionary[ExtResource("1_ch2am"), int]({
+ExtResource("4_gi3a3"): 1,
+ExtResource("5_u40kl"): 2
+})
+job_cost = Dictionary[ExtResource("1_ch2am"), int]({
+ExtResource("2_jtqo8"): 36
+})
+job_mask = Dictionary[ExtResource("1_ch2am"), int]({
+ExtResource("3_xk1en"): 1
+})
+upper_mask = Array[ExtResource("1_ch2am")]([ExtResource("4_gi3a3")])
+metadata/_custom_type_script = "uid://chnttjydh538r"

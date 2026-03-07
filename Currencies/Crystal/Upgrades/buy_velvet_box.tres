@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://4flv3p144unp"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_8kftd"]
+[ext_resource type="Resource" uid="uid://bgdqsv5fi4k3a" path="res://Currencies/Coins/Coins.tres" id="2_6u5j8"]
+[ext_resource type="Resource" uid="uid://eynuhxro6yab" path="res://Currencies/Houses/Floor_Space.tres" id="3_6u5j8"]
+[ext_resource type="Resource" uid="uid://b481l10tmoxct" path="res://Currencies/Crystal/Crystal.tres" id="3_qvl01"]
+[ext_resource type="Resource" uid="uid://bnolnvv6mp3qc" path="res://Currencies/Crystal/Upgrades/velvet_box.tres" id="4_atjhc"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="5_3kjnp"]
+
+[resource]
+script = ExtResource("5_3kjnp")
+job_name = "Buy a velvet box"
+job_desc = "Haggling and dickering..."
+job_story = "Finding a good deal on a jewelry box, you decide your crystals will fit inside nicely."
+job_duration = 4
+job_reward = Dictionary[ExtResource("1_8kftd"), int]({
+ExtResource("4_atjhc"): 1,
+ExtResource("3_6u5j8"): 2
+})
+job_cost = Dictionary[ExtResource("1_8kftd"), int]({
+ExtResource("2_6u5j8"): 15
+})
+job_mask = Dictionary[ExtResource("1_8kftd"), int]({
+ExtResource("2_6u5j8"): 15,
+ExtResource("3_qvl01"): 1
+})
+upper_mask = Array[ExtResource("1_8kftd")]([ExtResource("4_atjhc")])
+metadata/_custom_type_script = "uid://chnttjydh538r"

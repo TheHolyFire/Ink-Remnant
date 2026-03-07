@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://byckmkyt7rdh2"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_tuihe"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="1_yl0ah"]
+[ext_resource type="Resource" uid="uid://b481l10tmoxct" path="res://Currencies/Crystal/Crystal.tres" id="2_cen1s"]
+[ext_resource type="Resource" uid="uid://diuwc33l8lqgb" path="res://Currencies/Scrolls/Scrolls.tres" id="3_o3508"]
+[ext_resource type="Resource" uid="uid://chkf1n2bsuu5b" path="res://Currencies/Default_currency.tres" id="5_s3noh"]
+
+[resource]
+script = ExtResource("1_yl0ah")
+job_name = "Trade crystal for scrolls"
+job_desc = "You spot a few yellowed sheets at a stall full of odds and ends..."
+job_story = "The stall owner looks uncertain, but he shakes his head and takes the trade."
+job_duration = 3
+job_reward = Dictionary[ExtResource("1_tuihe"), int]({
+ExtResource("3_o3508"): 2
+})
+job_cost = Dictionary[ExtResource("1_tuihe"), int]({
+ExtResource("2_cen1s"): 1
+})
+job_mask = Dictionary[ExtResource("1_tuihe"), int]({
+ExtResource("2_cen1s"): 1
+})
+upgrade_name = ExtResource("5_s3noh")
+metadata/_custom_type_script = "uid://chnttjydh538r"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Currency" format=3 uid="uid://bslnw57acrori"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_tbwg5"]
+[ext_resource type="Resource" uid="uid://bmq15p01csdrq" path="res://Currencies/Magic/Magic.tres" id="2_8qsbr"]
+
+[resource]
+script = ExtResource("1_tbwg5")
+name = "Principles of Octomancy"
+max_amount = 8
+tick_types = null
+is_upgrade = true
+upgrade_target = Dictionary[ExtResource("1_tbwg5"), int]({
+ExtResource("2_8qsbr"): 11
+})
+metadata/_custom_type_script = "uid://4goxmvo7g0yf"

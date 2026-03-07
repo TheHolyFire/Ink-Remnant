@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://dxtgm1wk7cm1v"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_457ma"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="2_kw5gp"]
+
+[resource]
+script = ExtResource("2_kw5gp")
+job_name = "Research standing stone circles"
+job_desc = "The ruins are near enough to hike to"
+metadata/_custom_type_script = "uid://chnttjydh538r"

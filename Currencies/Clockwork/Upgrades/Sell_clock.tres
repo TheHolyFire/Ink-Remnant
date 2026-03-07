@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://djoqmtpc5786w"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_lwweo"]
+[ext_resource type="Resource" uid="uid://dey0n8ex4ljnh" path="res://Currencies/Clockwork/Upgrades/Clock.tres" id="2_0bfey"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="2_00i4w"]
+[ext_resource type="Resource" uid="uid://eynuhxro6yab" path="res://Currencies/Houses/Floor_Space.tres" id="3_8a2kr"]
+[ext_resource type="Resource" uid="uid://bgdqsv5fi4k3a" path="res://Currencies/Coins/Coins.tres" id="4_8a2kr"]
+
+[resource]
+script = ExtResource("2_00i4w")
+job_name = "Sell a clock"
+job_desc = "\"It's refurbished,\" you explain. "
+job_story = "If it keeps time, it's a clock. In the end, they buy it."
+job_duration = 4
+job_reward = Dictionary[ExtResource("1_lwweo"), int]({
+ExtResource("4_8a2kr"): 35
+})
+job_cost = Dictionary[ExtResource("1_lwweo"), int]({
+ExtResource("2_0bfey"): 1,
+ExtResource("3_8a2kr"): 1
+})
+job_mask = Dictionary[ExtResource("1_lwweo"), int]({
+ExtResource("2_0bfey"): 1
+})
+metadata/_custom_type_script = "uid://chnttjydh538r"

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://b0ok0m014kyl2"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_1byq6"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="2_i44vy"]
+[ext_resource type="Resource" uid="uid://lln2o1wqacir" path="res://Currencies/Research/Research.tres" id="2_tth0q"]
+[ext_resource type="Resource" uid="uid://bgk58kkborrcp" path="res://Currencies/Magic/Lapidomantic_Principles.tres" id="3_ahrsa"]
+
+[resource]
+script = ExtResource("2_i44vy")
+job_name = "Research Lapidomancy"
+job_desc = "The magic of gemcutting - not to be confused with Lepidomancy, the magic of butterflies."
+job_story = "The ancient city holds this magic close; many know of it, but few truly understand its workings."
+job_duration = 4
+job_reward = Dictionary[ExtResource("1_1byq6"), int]({
+ExtResource("3_ahrsa"): 2
+})
+job_cost = Dictionary[ExtResource("1_1byq6"), int]({
+ExtResource("2_tth0q"): 4
+})
+job_mask = Dictionary[ExtResource("1_1byq6"), int]({
+ExtResource("2_tth0q"): 10
+})
+upper_mask = Array[ExtResource("1_1byq6")]([ExtResource("3_ahrsa")])
+metadata/_custom_type_script = "uid://chnttjydh538r"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Currency" format=3 uid="uid://dj2di30qapb46"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_q8bch"]
+[ext_resource type="Resource" uid="uid://lln2o1wqacir" path="res://Currencies/Research/Research.tres" id="2_t7y5i"]
+
+[resource]
+script = ExtResource("1_q8bch")
+name = "books"
+max_amount = 5
+tick_types = null
+is_upgrade = true
+upgrade_target = Dictionary[ExtResource("1_q8bch"), int]({
+ExtResource("2_t7y5i"): 5
+})
+metadata/_custom_type_script = "uid://4goxmvo7g0yf"

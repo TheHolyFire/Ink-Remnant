@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Currency" format=3 uid="uid://chkf1n2bsuu5b"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_yju5n"]
+
+[resource]
+script = ExtResource("1_yju5n")
+name = "Default"
+max_amount = 999
+make_counter = false
+metadata/_custom_type_script = "uid://4goxmvo7g0yf"

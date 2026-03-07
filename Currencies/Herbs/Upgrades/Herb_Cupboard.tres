@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Currency" format=3 uid="uid://d782v8nugsdh"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_2xus1"]
+[ext_resource type="Resource" uid="uid://ev540b7kiffg" path="res://Currencies/Herbs/Herbs.tres" id="2_w2k0l"]
+
+[resource]
+script = ExtResource("1_2xus1")
+name = "Herb Cupboard"
+max_amount = 3
+tick_types = null
+is_upgrade = true
+makes_label = false
+upgrade_target = Dictionary[ExtResource("1_2xus1"), int]({
+ExtResource("2_w2k0l"): 20
+})
+metadata/_custom_type_script = "uid://4goxmvo7g0yf"

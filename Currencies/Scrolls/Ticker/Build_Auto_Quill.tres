@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://c8xoraiac7q8s"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_vnm1f"]
+[ext_resource type="Resource" uid="uid://c6vradg6ggt2e" path="res://Currencies/Clockwork/Upgrades/Typewriter.tres" id="2_miv22"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="2_r36fh"]
+[ext_resource type="Resource" uid="uid://s7moftfa1cc4" path="res://Currencies/Clockwork/Tickers/Clockwork_Arm.tres" id="3_2sj82"]
+[ext_resource type="Resource" uid="uid://diuwc33l8lqgb" path="res://Currencies/Scrolls/Scrolls.tres" id="4_2sj82"]
+[ext_resource type="Resource" uid="uid://blmi45f8gjetk" path="res://Currencies/Scrolls/Ticker/Auto_quill.tres" id="4_88emt"]
+
+[resource]
+script = ExtResource("2_r36fh")
+job_name = "Build a clockwork copyist"
+job_desc = "The typewriter and mechanical arm could be combined..."
+job_story = "You dub your invention the 'autoquill', and immediately set it to copying scrolls. "
+job_duration = 5
+job_reward = Dictionary[ExtResource("1_vnm1f"), int]({
+ExtResource("4_88emt"): 1
+})
+job_cost = Dictionary[ExtResource("1_vnm1f"), int]({
+ExtResource("2_miv22"): 1,
+ExtResource("3_2sj82"): 1
+})
+job_mask = Dictionary[ExtResource("1_vnm1f"), int]({
+ExtResource("2_miv22"): 1,
+ExtResource("3_2sj82"): 1,
+ExtResource("4_2sj82"): 1
+})
+upper_mask = Array[ExtResource("1_vnm1f")]([ExtResource("4_88emt")])
+metadata/_custom_type_script = "uid://chnttjydh538r"

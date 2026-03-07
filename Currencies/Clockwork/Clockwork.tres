@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Currency" format=3 uid="uid://buakd3dxh85m5"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_qily0"]
+
+[resource]
+script = ExtResource("1_qily0")
+name = "Clockwork"
+max_amount = 9
+metadata/_custom_type_script = "uid://4goxmvo7g0yf"

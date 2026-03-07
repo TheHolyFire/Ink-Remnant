@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://ptbubdulbbkv"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_yanaq"]
+[ext_resource type="Resource" uid="uid://bro2btc7lxm21" path="res://Currencies/Houses/hovel.tres" id="2_xf2yk"]
+[ext_resource type="Resource" uid="uid://bgdqsv5fi4k3a" path="res://Currencies/Coins/Coins.tres" id="2_xw3fp"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="4_hdwgj"]
+
+[resource]
+script = ExtResource("4_hdwgj")
+job_name = "Find a place to stay"
+job_desc = "Gathering your resources, you set out to look for lodging..."
+job_story = "You find a place. It's not comfortable, but it's cheap enough."
+job_duration = 7
+job_reward = Dictionary[ExtResource("1_yanaq"), int]({
+ExtResource("2_xf2yk"): 1
+})
+job_cost = Dictionary[ExtResource("1_yanaq"), int]({
+ExtResource("2_xw3fp"): 10
+})
+upper_mask = Array[ExtResource("1_yanaq")]([ExtResource("2_xf2yk")])
+metadata/_custom_type_script = "uid://chnttjydh538r"

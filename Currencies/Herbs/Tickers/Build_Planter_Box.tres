@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://c4y3q1s35tfi7"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_an7ms"]
+[ext_resource type="Resource" uid="uid://ev540b7kiffg" path="res://Currencies/Herbs/Herbs.tres" id="2_fu4o1"]
+[ext_resource type="Resource" uid="uid://eynuhxro6yab" path="res://Currencies/Houses/Floor_Space.tres" id="3_scxp4"]
+[ext_resource type="Resource" uid="uid://bu8yhdlg7r8i6" path="res://Currencies/Herbs/Tickers/PlanterBox.tres" id="4_lyiy1"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="5_llojl"]
+
+[resource]
+script = ExtResource("5_llojl")
+job_name = "Plant a window box"
+job_desc = "Some of these herbs are still alive..."
+job_story = "It's not much of a garden, but you can harvest a bit here and there."
+job_duration = 4
+job_reward = Dictionary[ExtResource("1_an7ms"), int]({
+ExtResource("4_lyiy1"): 1,
+ExtResource("3_scxp4"): 2
+})
+job_cost = Dictionary[ExtResource("1_an7ms"), int]({
+ExtResource("2_fu4o1"): 20
+})
+job_mask = Dictionary[ExtResource("1_an7ms"), int]({
+ExtResource("2_fu4o1"): 2
+})
+upper_mask = Array[ExtResource("1_an7ms")]([ExtResource("4_lyiy1")])
+is_upgrade = true
+upgrade_name = ExtResource("4_lyiy1")
+metadata/_custom_type_script = "uid://chnttjydh538r"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Currency" format=3 uid="uid://bxa7xsaugfp1n"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_otvuh"]
+[ext_resource type="Resource" uid="uid://bgdqsv5fi4k3a" path="res://Currencies/Coins/Coins.tres" id="2_mysna"]
+
+[resource]
+script = ExtResource("1_otvuh")
+name = "Purse"
+max_amount = 3
+tick_types = null
+is_upgrade = true
+makes_label = false
+upgrade_target = Dictionary[ExtResource("1_otvuh"), int]({
+ExtResource("2_mysna"): 25
+})
+metadata/_custom_type_script = "uid://4goxmvo7g0yf"

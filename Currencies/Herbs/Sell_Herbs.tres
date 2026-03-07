@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://k30f3agdonc2"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_0uf8r"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="1_ih7g8"]
+[ext_resource type="Resource" uid="uid://ev540b7kiffg" path="res://Currencies/Herbs/Herbs.tres" id="2_ug716"]
+[ext_resource type="Resource" uid="uid://bgdqsv5fi4k3a" path="res://Currencies/Coins/Coins.tres" id="3_ug716"]
+
+[resource]
+script = ExtResource("1_ih7g8")
+job_name = "Sell herbs"
+job_desc = "You take your herbs to the apothecary..."
+job_story = "They're not the freshest,' the apothecary sniffs, but he pays you happily."
+job_duration = 1
+job_reward = Dictionary[ExtResource("1_0uf8r"), int]({
+ExtResource("3_ug716"): 5
+})
+job_cost = Dictionary[ExtResource("1_0uf8r"), int]({
+ExtResource("2_ug716"): 5
+})
+job_mask = Dictionary[ExtResource("1_0uf8r"), int]({
+ExtResource("2_ug716"): 2
+})
+metadata/_custom_type_script = "uid://chnttjydh538r"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://bhgmol488p5vi"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_cgqhq"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="2_bj5wb"]
+
+[resource]
+script = ExtResource("2_bj5wb")
+job_name = "Search the City"
+job_desc = "Examining alleys and highways"
+job_story = "After carefully canvassing the city, you've discovered a few jobs to do."
+job_duration = 3
+metadata/_custom_type_script = "uid://chnttjydh538r"

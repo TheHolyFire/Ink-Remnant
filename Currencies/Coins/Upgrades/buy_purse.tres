@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://b56emy5r4k1eg"]
+
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="1_5ncfg"]
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_getsa"]
+[ext_resource type="Resource" uid="uid://bgdqsv5fi4k3a" path="res://Currencies/Coins/Coins.tres" id="2_h1mas"]
+[ext_resource type="Resource" uid="uid://bxa7xsaugfp1n" path="res://Currencies/Coins/Upgrades/Purse.tres" id="3_1cq51"]
+
+[resource]
+script = ExtResource("1_5ncfg")
+job_name = "Buy a new purse"
+job_desc = "Shopping in stores and stalls..."
+job_story = "Scraping together your modest earnings, you invest them in a larger purse."
+job_duration = 3
+job_reward = Dictionary[ExtResource("1_getsa"), int]({
+ExtResource("3_1cq51"): 1
+})
+job_cost = Dictionary[ExtResource("1_getsa"), int]({
+ExtResource("2_h1mas"): 10
+})
+job_mask = Dictionary[ExtResource("1_getsa"), int]({
+ExtResource("2_h1mas"): 10
+})
+upper_mask = Array[ExtResource("1_getsa")]([ExtResource("3_1cq51")])
+metadata/_custom_type_script = "uid://chnttjydh538r"

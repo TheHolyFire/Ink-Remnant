@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Currency" format=3 uid="uid://bgk58kkborrcp"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_pfsi6"]
+[ext_resource type="Resource" uid="uid://bmq15p01csdrq" path="res://Currencies/Magic/Magic.tres" id="2_j3wfd"]
+
+[resource]
+script = ExtResource("1_pfsi6")
+name = "Principles of Lapidomancy"
+max_amount = 16
+tick_types = null
+is_upgrade = true
+upgrade_target = Dictionary[ExtResource("1_pfsi6"), int]({
+ExtResource("2_j3wfd"): 4
+})
+metadata/_custom_type_script = "uid://4goxmvo7g0yf"

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://bguyhlw8njqi"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_qis31"]
+[ext_resource type="Resource" uid="uid://bgdqsv5fi4k3a" path="res://Currencies/Coins/Coins.tres" id="2_01d2o"]
+[ext_resource type="Resource" uid="uid://bxa7xsaugfp1n" path="res://Currencies/Coins/Upgrades/Purse.tres" id="3_qov5r"]
+[ext_resource type="Resource" uid="uid://cnr85jhkwgy18" path="res://Currencies/Coins/Upgrades/Lockbox.tres" id="4_8wm2a"]
+[ext_resource type="Resource" uid="uid://eynuhxro6yab" path="res://Currencies/Houses/Floor_Space.tres" id="5_tfko0"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="6_hdcx5"]
+
+[resource]
+script = ExtResource("6_hdcx5")
+job_name = "Buy a lockbox"
+job_desc = "Might as well store some purses at home..."
+job_story = "It takes up some floorspace, but it's nice and secure"
+job_duration = 4
+job_reward = Dictionary[ExtResource("1_qis31"), int]({
+ExtResource("4_8wm2a"): 1,
+ExtResource("5_tfko0"): 4
+})
+job_cost = Dictionary[ExtResource("1_qis31"), int]({
+ExtResource("2_01d2o"): 100
+})
+job_mask = Dictionary[ExtResource("1_qis31"), int]({
+ExtResource("3_qov5r"): 3
+})
+upper_mask = Array[ExtResource("1_qis31")]([ExtResource("4_8wm2a")])
+is_upgrade = true
+upgrade_name = ExtResource("4_8wm2a")
+metadata/_custom_type_script = "uid://chnttjydh538r"

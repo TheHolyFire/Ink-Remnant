@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://yh8r1t46heoc"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_cvh2s"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="2_p42ej"]
+[ext_resource type="Resource" uid="uid://buakd3dxh85m5" path="res://Currencies/Clockwork/Clockwork.tres" id="2_pd6qv"]
+[ext_resource type="Resource" uid="uid://b481l10tmoxct" path="res://Currencies/Crystal/Crystal.tres" id="3_2ax0t"]
+[ext_resource type="Resource" uid="uid://lln2o1wqacir" path="res://Currencies/Research/Research.tres" id="4_2hcb5"]
+[ext_resource type="Resource" uid="uid://bj73kw43uigdi" path="res://Currencies/Telescope/Telescope.tres" id="4_h1283"]
+[ext_resource type="Resource" uid="uid://eynuhxro6yab" path="res://Currencies/Houses/Floor_Space.tres" id="5_2ax0t"]
+
+[resource]
+script = ExtResource("2_p42ej")
+job_name = "Build a telescope"
+job_desc = "There must be something worth seeing in the sky..."
+job_story = "The final piece gleams with polished brass and precisely ground crystal. Now THIS is science!"
+job_duration = 7
+job_reward = Dictionary[ExtResource("1_cvh2s"), int]({
+ExtResource("4_h1283"): 1,
+ExtResource("5_2ax0t"): 3
+})
+job_cost = Dictionary[ExtResource("1_cvh2s"), int]({
+ExtResource("2_pd6qv"): 100,
+ExtResource("3_2ax0t"): 10
+})
+job_mask = Dictionary[ExtResource("1_cvh2s"), int]({
+ExtResource("2_pd6qv"): 10,
+ExtResource("3_2ax0t"): 1,
+ExtResource("4_2hcb5"): 1
+})
+upper_mask = Array[ExtResource("1_cvh2s")]([ExtResource("4_h1283")])
+metadata/_custom_type_script = "uid://chnttjydh538r"

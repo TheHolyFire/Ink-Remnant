@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Currency" format=3 uid="uid://d3v6hqyi1mgij"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_1p6bq"]
+[ext_resource type="Resource" uid="uid://lln2o1wqacir" path="res://Currencies/Research/Research.tres" id="2_wgsc8"]
+
+[resource]
+script = ExtResource("1_1p6bq")
+name = "Star Chart"
+max_amount = 20
+tick_types = null
+is_upgrade = true
+upgrade_target = Dictionary[ExtResource("1_1p6bq"), int]({
+ExtResource("2_wgsc8"): 10
+})
+metadata/_custom_type_script = "uid://4goxmvo7g0yf"

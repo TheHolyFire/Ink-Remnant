@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://bcn1jc1qt8rjx"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_xkcye"]
+[ext_resource type="Resource" uid="uid://buakd3dxh85m5" path="res://Currencies/Clockwork/Clockwork.tres" id="2_5wdkn"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="2_rdg4w"]
+[ext_resource type="Resource" uid="uid://dey0n8ex4ljnh" path="res://Currencies/Clockwork/Upgrades/Clock.tres" id="3_2p7pt"]
+[ext_resource type="Resource" uid="uid://c6vradg6ggt2e" path="res://Currencies/Clockwork/Upgrades/Typewriter.tres" id="4_tecrd"]
+
+[resource]
+script = ExtResource("2_rdg4w")
+job_name = "Build typewriter"
+job_desc = "Fiddling and finagling..."
+job_story = "It's a lot of careful adjustment and tweaking, but you get it working."
+job_duration = 2
+job_reward = Dictionary[ExtResource("1_xkcye"), int]({
+ExtResource("4_tecrd"): 1
+})
+job_cost = Dictionary[ExtResource("1_xkcye"), int]({
+ExtResource("2_5wdkn"): 27
+})
+job_mask = Dictionary[ExtResource("1_xkcye"), int]({
+ExtResource("3_2p7pt"): 1
+})
+upper_mask = Array[ExtResource("1_xkcye")]([ExtResource("4_tecrd")])
+metadata/_custom_type_script = "uid://chnttjydh538r"

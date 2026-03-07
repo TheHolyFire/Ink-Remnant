@@ -1,0 +1,69 @@
+extends Label
+class_name CurrencyLabel
+
+var has_been_seen: bool = false
+var label_type: Currency = CurrencyManager.default_curency
+var amount: int = 0
+var max_amount: int = 0
+var currency_name: String = "None"
+
+
+func _ready() -> void:
+	pass
+
+
+func text_set(currency: Currency):
+	label_type = currency
+	text = currency.name.capitalize() + ": " + str(currency.amount) + "/" + str(currency.max_amount)
+
+
+func update(res_type: Currency, new_amount: int):
+	var dif: int = new_amount - amount
+	if dif == 0:
+		return
+	amount = new_amount
+	text = res_type.name.capitalize() + ": " + str(amount) + "/" + str(res_type.max_amount)
+	if dif > 0:
+		spawn_popup(dif)
+	if dif < 0:
+		spawn_neg_popup(dif)
+
+
+func upgrade(res_type: Currency, new_amount: int):
+	var dif: int = new_amount - max_amount
+	if dif == 0:
+		return
+	max_amount = new_amount
+	text = res_type.name.capitalize() + ": " + str(res_type.amount) + "/" + str(new_amount)
+	#if dif > 0:
+		#spawn_popup(dif)
+	#if dif < 0:
+		#spawn_neg_popup(dif)
+
+
+#func flash():
+	#var tween = create_tween()
+	#tween.tween_property(self, "scale", Vector2(1.3, 1.0), 0.1)
+	#tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.1)
+
+
+func spawn_popup(txt_amount: int):
+	var popup = Label.new()
+	popup.text = "+%d" % txt_amount
+	add_child(popup)
+	popup.global_position = global_position + Vector2(get_minimum_size().x, 0)
+	var tween = create_tween()
+	tween.tween_property(popup, "position", popup.position + Vector2(30, -10), 0.6)
+	tween.parallel().tween_property(popup, "modulate:a", 0.0, 0.6)
+	tween.tween_callback(popup.queue_free)
+
+
+func spawn_neg_popup(txt_amount: int):
+	var popup = Label.new()
+	popup.text = "%d" % txt_amount
+	add_child(popup)
+	popup.global_position = global_position + Vector2(get_minimum_size().x, 0)
+	var tween = create_tween()
+	tween.tween_property(popup, "position", popup.position + Vector2(30, 10), 0.6)
+	tween.parallel().tween_property(popup, "modulate:a", 0.0, 0.6)
+	tween.tween_callback(popup.queue_free)

@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Ink Remnant"
+config/description="Ink Remnant is an active text-based incremental game about becoming a wizard"
+run/main_scene="uid://dq1wme6qfraaa"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/image="uid://cshfjrqnvgeqi"
+config/icon="res://icon.svg"
+
+[autoload]
+
+SignalHub="*uid://rqw1ggcupfwp"
+CurrencyManager="*uid://c2oikuewex7fe"
+JobManager="*uid://behdjfhkme15r"
+SaveManager="*uid://bj06yuj6u2e2d"
+SceneManager="*uid://daygfib68x7pe"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[global_group]
+
+BarButtons=""
+ButtonStacks="Stacks of buttons"
+ButtonFrames=""
+HouseTabFrame=""
+SaveTabFrame=""
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

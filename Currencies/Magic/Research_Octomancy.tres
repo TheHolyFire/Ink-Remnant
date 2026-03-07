@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Job" format=3 uid="uid://cyprmbsmeo4ji"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_8vmjt"]
+[ext_resource type="Resource" uid="uid://lln2o1wqacir" path="res://Currencies/Research/Research.tres" id="2_iv7ks"]
+[ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="2_p0m7p"]
+[ext_resource type="Resource" uid="uid://bslnw57acrori" path="res://Currencies/Magic/Octomantic_Principles.tres" id="3_uthvu"]
+
+[resource]
+script = ExtResource("2_p0m7p")
+job_name = "Research Octomancy"
+job_desc = "The magic of eights - one of the simplest magics in the ancient city."
+job_story = "It takes - predictably - eight tries to learn the true secrets."
+job_duration = 8
+job_reward = Dictionary[ExtResource("1_8vmjt"), int]({
+ExtResource("3_uthvu"): 1
+})
+job_cost = Dictionary[ExtResource("1_8vmjt"), int]({
+ExtResource("2_iv7ks"): 88
+})
+job_mask = Dictionary[ExtResource("1_8vmjt"), int]({
+ExtResource("2_iv7ks"): 10
+})
+upper_mask = Array[ExtResource("1_8vmjt")]([ExtResource("3_uthvu")])
+metadata/_custom_type_script = "uid://chnttjydh538r"

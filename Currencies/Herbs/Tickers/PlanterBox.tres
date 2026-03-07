@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Currency" format=3 uid="uid://bu8yhdlg7r8i6"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_jxf63"]
+[ext_resource type="Resource" uid="uid://ev540b7kiffg" path="res://Currencies/Herbs/Herbs.tres" id="2_figdy"]
+
+[resource]
+script = ExtResource("1_jxf63")
+name = "Planter Box"
+max_amount = 6
+is_ticker = true
+tick_types = Dictionary[Object, int]({
+ExtResource("2_figdy"): 1
+})
+tick_amount = 2
+is_upgrade = true
+makes_label = false
+metadata/_custom_type_script = "uid://4goxmvo7g0yf"
