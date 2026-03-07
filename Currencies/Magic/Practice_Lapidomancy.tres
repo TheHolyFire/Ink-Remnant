@@ -13,7 +13,7 @@ job_desc = "Lapidomancy is finnicky, painstaking work."
 job_story = "When you're done, you're tired and frustrated. But you feel slightly more powerful. "
 job_duration = 2
 job_reward = Dictionary[ExtResource("1_y0csl"), int]({
-ExtResource("4_nh56p"): 2
+ExtResource("4_nh56p"): 14
 })
 job_cost = Dictionary[ExtResource("1_y0csl"), int]({
 ExtResource("2_vonv7"): 1

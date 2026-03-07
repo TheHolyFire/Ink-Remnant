@@ -7,6 +7,7 @@ var simple_jobs: Array[Job] = [
 	load("res://Currencies/Research/Read_A_Scroll.tres"),
 	load("res://Currencies/Magic/Practice_Octomancy.tres"),
 	load("res://Currencies/Magic/Practice_Lapidomancy.tres"),
+	load("res://Currencies/Telescope/Chart_the_stars.tres"),
 ]
 
 var trades: Array[Job] = [
@@ -25,13 +26,13 @@ var upgrades: Array[Job] = [
 	load("res://Currencies/Crystal/Upgrades/buy_velvet_box.tres"),
 	load("res://Currencies/Coins/Upgrades/Buy_lockbox.tres"),
 	load("res://Currencies/Books/Upgrades/Buy_Bookshelf.tres"),
-	load("res://Currencies/Telescope/Chart_the_stars.tres"),
 	load("res://Currencies/Telescope/Construct_telescope.tres"),
 	load("res://Currencies/Magic/Research_Octomancy.tres"),
 	load("res://Currencies/Magic/Create_Octagon.tres"),
 	load("res://Currencies/Magic/Create_Gem_Seed.tres"),
 	load("res://Currencies/Magic/Research_Lapidomancy.tres"),
 	load("res://Currencies/Herbs/Upgrades/Buy_Herb_Cupboard.tres"),
+	load("res://Currencies/Scrolls/Upgrades/Buy_Scroll_Case.tres")
 ]
 
 var tickers: Array[Job] = [

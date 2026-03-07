@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Currency" format=3 uid="uid://b8qu387i41c6i"]
+
+[ext_resource type="Script" uid="uid://4goxmvo7g0yf" path="res://Currencies/Currency.gd" id="1_u4jo6"]
+[ext_resource type="Resource" uid="uid://diuwc33l8lqgb" path="res://Currencies/Scrolls/Scrolls.tres" id="2_lhf2x"]
+
+[resource]
+script = ExtResource("1_u4jo6")
+name = "Scroll Case"
+max_amount = 3
+tick_types = null
+is_upgrade = true
+makes_label = false
+upgrade_target = Dictionary[ExtResource("1_u4jo6"), int]({
+ExtResource("2_lhf2x"): 35
+})
+metadata/_custom_type_script = "uid://4goxmvo7g0yf"

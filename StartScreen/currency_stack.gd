@@ -18,7 +18,6 @@ func update_list():
 		var currency_label = CurrencyLabel.new()
 		currency_label.visible = currency.update_seen()
 		currency_label.text_set(currency)	
-		currency_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		visible_labels.append(currency_label)
 		add_child(currency_label)
 

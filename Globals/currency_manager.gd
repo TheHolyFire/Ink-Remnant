@@ -14,6 +14,7 @@ extends Node
 	load("res://Currencies/Herbs/Herbs.tres"),
 	load("res://Currencies/Scrolls/Scrolls.tres"),
 	load("res://Currencies/Scrolls/Ticker/Auto_quill.tres"),
+	load("res://Currencies/Scrolls/Upgrades/Scroll_Case.tres"),
 	load("res://Currencies/Clockwork/Upgrades/Clock.tres"),
 	load("res://Currencies/Coins/Upgrades/Purse.tres"),
 	load("res://Currencies/Crystal/Upgrades/velvet_box.tres"),

@@ -8,7 +8,7 @@
 
 [resource]
 script = ExtResource("4_eim2r")
-job_name = "Create a star chart"
+job_name = "Chart the stars"
 job_desc = "Mapping the heavens..."
 job_story = "It's as accurate as you can make it - and that's rather accurate indeed."
 job_duration = 3
@@ -19,5 +19,4 @@ job_mask = Dictionary[ExtResource("1_lv52i"), int]({
 ExtResource("2_5qgvn"): 1,
 ExtResource("3_5qgvn"): 5
 })
-upper_mask = Array[ExtResource("1_lv52i")]([ExtResource("3_3g3ht")])
 metadata/_custom_type_script = "uid://chnttjydh538r"

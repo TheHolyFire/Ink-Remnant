@@ -155,9 +155,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CurrencyStackFrame" type="NinePatchRect" parent="." unique_id=1379427192]
 anchors_preset = -1
-anchor_left = 0.0234375
+anchor_left = 0.009375
 anchor_top = 0.043055557
-anchor_right = 0.1921875
+anchor_right = 0.20390625
 anchor_bottom = 0.95416665
 size_flags_horizontal = 0
 size_flags_vertical = 3

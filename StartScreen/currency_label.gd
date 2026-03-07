@@ -14,7 +14,7 @@ func _ready() -> void:
 
 func text_set(currency: Currency):
 	label_type = currency
-	text = currency.name.capitalize() + ": " + str(currency.amount) + "/" + str(currency.max_amount)
+	text = currency.name + ": " + str(currency.amount) + "/" + str(currency.max_amount)
 
 
 func update(res_type: Currency, new_amount: int):
