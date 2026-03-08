@@ -14,8 +14,10 @@ config/name="Ink Remnant"
 config/description="Ink Remnant is an active text-based incremental game about becoming a wizard"
 run/main_scene="uid://dq1wme6qfraaa"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/stretch_mode=0
 boot_splash/image="uid://cshfjrqnvgeqi"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=3000
 
 [autoload]
 

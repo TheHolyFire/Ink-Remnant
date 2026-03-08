@@ -28,11 +28,11 @@ extends Node
 	load("res://Currencies/Houses/Floor_Space.tres"),
 	load("res://Currencies/Research/Research.tres"),
 	load("res://Currencies/Research/Star_Chart.tres"),
-	load("res://Currencies/Magic/Lapidomantic_Principles.tres"),
 	load("res://Currencies/Magic/Magic_Crystal.tres"),
 	load("res://Currencies/Magic/Gem_Seed.tres"),
 	load("res://Currencies/Telescope/Telescope.tres"),
 	load("res://Currencies/Magic/Magic.tres"),
+	load("res://Currencies/Magic/Lapidomantic_Principles.tres"),
 	load("res://Currencies/Magic/Octomantic_Principles.tres"),
 	load("res://Currencies/Magic/Octagon.tres"),
 ]
