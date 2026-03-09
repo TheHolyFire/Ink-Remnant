@@ -108,9 +108,9 @@ func update_tooltip():
 		line += " " + str(job_run.job_cost[price]) + " " + price.name + ","
 	for price in job_run.upper_mask:
 		line += "\n" + "Max: " + str(price.amount) + "/" + str(price.max_amount)
-	for price in job_run.job_reward:
-		if price.name == "Floor Space":
-			line += "\n" + "Floor Space: " + str(job_run.job_reward[price]) # + "/" + str(price.max_amount)
+	#for price in job_run.job_reward:
+		#if price.name == "Floor Space":
+			#line += "\n" + "Floor Space: " + str(job_run.job_reward[price]) # + "/" + str(price.max_amount)
 	tooltip_text = line
 	
 func disable_others(button: BarButton):

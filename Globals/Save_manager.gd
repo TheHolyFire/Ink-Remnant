@@ -35,3 +35,4 @@ func load(savename: String):
 		currency.get_max()
 		
 	SignalHub.display.emit("Game loaded: " + savename + "\n\n")
+	SceneManager.set_scene(SceneManager.Scene.CITY)

@@ -4,7 +4,6 @@
 [ext_resource type="Resource" uid="uid://b481l10tmoxct" path="res://Currencies/Crystal/Crystal.tres" id="2_p0qup"]
 [ext_resource type="Script" uid="uid://chnttjydh538r" path="res://Currencies/job.gd" id="2_vq1mf"]
 [ext_resource type="Resource" uid="uid://bmq15p01csdrq" path="res://Currencies/Magic/Magic.tres" id="3_jfqmu"]
-[ext_resource type="Resource" uid="uid://bgk58kkborrcp" path="res://Currencies/Magic/Lapidomantic_Principles.tres" id="4_jfqmu"]
 [ext_resource type="Resource" uid="uid://r3h7g75cvdtd" path="res://Currencies/Magic/Magic_Crystal.tres" id="4_t0syn"]
 
 [resource]
@@ -18,8 +17,7 @@ ExtResource("4_t0syn"): 1
 })
 job_cost = Dictionary[ExtResource("1_q0pfs"), int]({
 ExtResource("2_p0qup"): 1,
-ExtResource("3_jfqmu"): 10,
-ExtResource("4_jfqmu"): 2
+ExtResource("3_jfqmu"): 10
 })
 job_mask = Dictionary[ExtResource("1_q0pfs"), int]({
 ExtResource("3_jfqmu"): 10
