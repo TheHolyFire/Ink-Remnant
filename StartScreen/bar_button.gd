@@ -21,16 +21,14 @@ func _ready():
 	visible = job_run.is_unmasked()
 	text = job_run.job_name
 	toggle_mode = true
+	
 	progress.set_anchors_preset(Control.PRESET_FULL_RECT)
 	progress.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	#progress.offset_left = 5
-	#progress.offset_right = -5
-	#progress.offset_top = 5
-	#progress.offset_bottom = -5
 	progress.show_percentage = false
 	progress.value = 0
 	update_tooltip()
 	add_child(progress)
+	
 	pressed.connect(_on_pressed)
 	SignalHub.resource_updated.connect(check_visible)
 	SignalHub.resource_updated.connect(func(_a, _b): update_tooltip())

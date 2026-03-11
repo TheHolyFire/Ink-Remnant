@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://b4gwyj4h5xuui" path="res://StartScreen/backdrop.gd" id="1_1vt0a"]
 [ext_resource type="Script" uid="uid://cq4t44bcucve" path="res://StartScreen/button_stack.gd" id="1_2fenb"]
-[ext_resource type="Theme" uid="uid://x4ycbmwsug2v" path="res://theme_day.tres" id="1_ptm2y"]
+[ext_resource type="Theme" uid="uid://x4ycbmwsug2v" path="res://theme_light.tres" id="1_ptm2y"]
 [ext_resource type="Script" uid="uid://gciinqn85vni" path="res://StartScreen/currency_stack.gd" id="2_2fenb"]
 [ext_resource type="Texture2D" uid="uid://caqs4hxqhxc4u" path="res://Borders/panel-border-004.png" id="4_6dj8j"]
 [ext_resource type="Texture2D" uid="uid://ghf4w0mqty8t" path="res://Borders/panel-border-000.png" id="4_8lyn0"]
 [ext_resource type="Texture2D" uid="uid://bolh8b4tgcfqi" path="res://Borders/panel-border-006.png" id="6_iordt"]
-[ext_resource type="Theme" uid="uid://ccqkno7t5mybt" path="res://theme_night.tres" id="7_qe2qs"]
+[ext_resource type="Theme" uid="uid://ccqkno7t5mybt" path="res://theme_dark.tres" id="7_qe2qs"]
 [ext_resource type="Script" uid="uid://bsyeifs8bjboy" path="res://StartScreen/story_box.gd" id="7_xnqce"]
 [ext_resource type="Resource" uid="uid://cr35lb2c65e2t" path="res://Currencies/Houses/Buy_big_house.tres" id="8_ffxqw"]
 [ext_resource type="Resource" uid="uid://ptbubdulbbkv" path="res://Currencies/Houses/Acquire_hovel.tres" id="10_ly71l"]
@@ -124,7 +124,7 @@ script = ExtResource("21_11t3j")
 job_run = ExtResource("8_ffxqw")
 metadata/_custom_type_script = "uid://ddubjwaefbdws"
 
-[node name="SaveTabFrame2" type="NinePatchRect" parent="." unique_id=1625848577 groups=["SaveTabFrame"]]
+[node name="SaveTabFrame" type="NinePatchRect" parent="." unique_id=1625848577 groups=["SaveTabFrame"]]
 visible = false
 material = SubResource("ShaderMaterial_x5hg1")
 layout_mode = 1
@@ -141,7 +141,7 @@ patch_margin_right = 16
 patch_margin_bottom = 16
 metadata/_edit_use_anchors_ = true
 
-[node name="SaveButton1" type="Button" parent="SaveTabFrame2" unique_id=252257809]
+[node name="SaveButton1" type="Button" parent="SaveTabFrame" unique_id=252257809]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.022222223
@@ -152,7 +152,7 @@ text = "Save Slot 1"
 script = ExtResource("11_f01go")
 metadata/_edit_use_anchors_ = true
 
-[node name="SaveButton2" type="Button" parent="SaveTabFrame2" unique_id=1075350053]
+[node name="SaveButton2" type="Button" parent="SaveTabFrame" unique_id=1075350053]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.022222223
@@ -163,7 +163,7 @@ text = "Save Slot 2"
 script = ExtResource("11_11t3j")
 metadata/_edit_use_anchors_ = true
 
-[node name="LoadButton1" type="Button" parent="SaveTabFrame2" unique_id=2080955132]
+[node name="LoadButton1" type="Button" parent="SaveTabFrame" unique_id=2080955132]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.50555557
@@ -174,7 +174,7 @@ text = "Load Slot 1"
 script = ExtResource("12_ly71l")
 metadata/_edit_use_anchors_ = true
 
-[node name="LoadButton2" type="Button" parent="SaveTabFrame2" unique_id=801560958]
+[node name="LoadButton2" type="Button" parent="SaveTabFrame" unique_id=801560958]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.50555557
@@ -185,7 +185,7 @@ text = "Load Slot 2"
 script = ExtResource("13_7envs")
 metadata/_edit_use_anchors_ = true
 
-[node name="LoadButton3" type="Button" parent="SaveTabFrame2" unique_id=1484189838]
+[node name="LoadButton3" type="Button" parent="SaveTabFrame" unique_id=1484189838]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.50555557
@@ -194,6 +194,42 @@ anchor_right = 0.97962964
 anchor_bottom = 0.31955403
 text = "Load Autosave"
 script = ExtResource("14_7envs")
+metadata/_edit_use_anchors_ = true
+
+[node name="ThemeControlFrame" type="NinePatchRect" parent="." unique_id=1937613489 groups=["SaveTabFrame"]]
+material = SubResource("ShaderMaterial_x5hg1")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2265625
+anchor_top = 0.68472224
+anchor_right = 0.40859374
+anchor_bottom = 0.98194444
+size_flags_horizontal = 0
+texture = ExtResource("4_8lyn0")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+metadata/_edit_use_anchors_ = true
+
+[node name="DarkMode" type="Button" parent="ThemeControlFrame" unique_id=802387993]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09012876
+anchor_top = 0.1168223
+anchor_right = 0.8969957
+anchor_bottom = 0.43925226
+text = "Dark Mode"
+metadata/_edit_use_anchors_ = true
+
+[node name="LightMode" type="Button" parent="ThemeControlFrame" unique_id=2117188712]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09012876
+anchor_top = 0.5560747
+anchor_right = 0.8969957
+anchor_bottom = 0.87850463
+text = "Light Mode"
 metadata/_edit_use_anchors_ = true
 
 [node name="StoryBoxFrame" type="NinePatchRect" parent="." unique_id=1487746963]
@@ -365,7 +401,7 @@ text = "Work"
 script = ExtResource("19_4asdo")
 metadata/_edit_use_anchors_ = true
 
-[node name="Node2D" type="ColorRect" parent="." unique_id=800926911]
+[node name="Backdrop" type="ColorRect" parent="." unique_id=800926911]
 z_index = -10
 y_sort_enabled = true
 material = SubResource("ShaderMaterial_sr1na")
@@ -375,10 +411,12 @@ offset_bottom = 720.0
 mouse_filter = 2
 
 [connection signal="pressed" from="HouseButton" to="HouseButton" method="_on_pressed"]
-[connection signal="pressed" from="SaveTabFrame2/SaveButton1" to="SaveTabFrame2/SaveButton1" method="_on_pressed"]
-[connection signal="pressed" from="SaveTabFrame2/SaveButton2" to="SaveTabFrame2/SaveButton2" method="_on_pressed"]
-[connection signal="pressed" from="SaveTabFrame2/LoadButton1" to="SaveTabFrame2/LoadButton1" method="_on_pressed"]
-[connection signal="pressed" from="SaveTabFrame2/LoadButton2" to="SaveTabFrame2/LoadButton2" method="_on_pressed"]
-[connection signal="pressed" from="SaveTabFrame2/LoadButton3" to="SaveTabFrame2/LoadButton3" method="_on_pressed"]
+[connection signal="pressed" from="SaveTabFrame/SaveButton1" to="SaveTabFrame/SaveButton1" method="_on_pressed"]
+[connection signal="pressed" from="SaveTabFrame/SaveButton2" to="SaveTabFrame/SaveButton2" method="_on_pressed"]
+[connection signal="pressed" from="SaveTabFrame/LoadButton1" to="SaveTabFrame/LoadButton1" method="_on_pressed"]
+[connection signal="pressed" from="SaveTabFrame/LoadButton2" to="SaveTabFrame/LoadButton2" method="_on_pressed"]
+[connection signal="pressed" from="SaveTabFrame/LoadButton3" to="SaveTabFrame/LoadButton3" method="_on_pressed"]
+[connection signal="pressed" from="ThemeControlFrame/DarkMode" to="." method="_on_dark_mode_pressed"]
+[connection signal="pressed" from="ThemeControlFrame/LightMode" to="." method="_on_light_mode_pressed"]
 [connection signal="pressed" from="SettingsButton" to="SettingsButton" method="_on_pressed"]
 [connection signal="pressed" from="CityButton" to="CityButton" method="_on_pressed"]

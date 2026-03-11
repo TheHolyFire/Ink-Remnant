@@ -9,6 +9,8 @@ var timer: float = 0.0
 
 
 func _ready():
+	_on_dark_mode_pressed()
+	
 	button_stack_jobs.populate(JobManager.simple_jobs)
 	button_stack_trades.populate(JobManager.trades)
 	button_stack_upgrades.populate(JobManager.upgrades + JobManager.tickers)
@@ -57,3 +59,15 @@ func check_maxes(_a = null):
 
 func autosave(_a = null):
 	SaveManager.save(SaveManager.save_name_3)
+
+
+func _on_light_mode_pressed() -> void:
+	self.theme = load("res://theme_light.tres")
+	RenderingServer.global_shader_parameter_set("Background", Color.CORNSILK)
+	RenderingServer.global_shader_parameter_set("FrameColors", Color.BLUE)
+
+
+func _on_dark_mode_pressed() -> void:
+	self.theme = load("res://theme_dark.tres")
+	RenderingServer.global_shader_parameter_set("Background", Color.BLUE)
+	RenderingServer.global_shader_parameter_set("FrameColors", Color.CORNSILK)

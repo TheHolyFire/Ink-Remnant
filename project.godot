@@ -50,3 +50,14 @@ SaveTabFrame=""
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+
+[shader_globals]
+
+FrameColors={
+"type": "color",
+"value": Color(5.4147094e-06, 0.13488847, 0.42403254, 1)
+}
+Background={
+"type": "color",
+"value": Color(0.26, 0.63, 1, 1)
+}

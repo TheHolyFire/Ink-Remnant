@@ -8,8 +8,6 @@ bg_color = Color(0, 0.40850002, 0.57, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drs5g"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tfa6t"]
-
 [resource]
 Button/colors/icon_disabled_color = Color(1, 1, 1, 0)
 Button/colors/icon_hover_color = Color(1, 1, 1, 0)
@@ -17,4 +15,3 @@ Button/colors/icon_normal_color = Color(1, 1, 1, 0)
 Button/styles/disabled = SubResource("StyleBoxFlat_a4cir")
 Button/styles/hover = SubResource("StyleBoxFlat_tfa6t")
 Button/styles/normal = SubResource("StyleBoxFlat_drs5g")
-HSeparator/styles/separator = SubResource("StyleBoxEmpty_tfa6t")
