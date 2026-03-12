@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgw8mcfw45j41"
+path="res://.godot/imported/Ascending the Vale.mp3-251c823a3077051abfc4fe5a072ae9f3.mp3str"
+
+[deps]
+
+source_file="res://Music/Ascending the Vale.mp3"
+dest_files=["res://.godot/imported/Ascending the Vale.mp3-251c823a3077051abfc4fe5a072ae9f3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

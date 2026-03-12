@@ -64,10 +64,10 @@ func autosave(_a = null):
 func _on_light_mode_pressed() -> void:
 	self.theme = load("res://theme_light.tres")
 	RenderingServer.global_shader_parameter_set("Background", Color.CORNSILK)
-	RenderingServer.global_shader_parameter_set("FrameColors", Color.BLUE)
+	RenderingServer.global_shader_parameter_set("FrameColors", Color.MIDNIGHT_BLUE)
 
 
 func _on_dark_mode_pressed() -> void:
 	self.theme = load("res://theme_dark.tres")
-	RenderingServer.global_shader_parameter_set("Background", Color.BLUE)
+	RenderingServer.global_shader_parameter_set("Background", Color.MIDNIGHT_BLUE)
 	RenderingServer.global_shader_parameter_set("FrameColors", Color.CORNSILK)

@@ -26,6 +26,7 @@ CurrencyManager="*uid://c2oikuewex7fe"
 JobManager="*uid://behdjfhkme15r"
 SaveManager="*uid://bj06yuj6u2e2d"
 SceneManager="*uid://daygfib68x7pe"
+BackgroundMusicPlayer="*uid://bdgnjag6q58qk"
 
 [display]
 
@@ -61,3 +62,10 @@ Background={
 "type": "color",
 "value": Color(0.26, 0.63, 1, 1)
 }
+
+[steam]
+
+initialization/app_id=0
+initialization/initialize_on_startup=false
+initialization/embed_callbacks=false
+multiplayer_peer/max_channels=4

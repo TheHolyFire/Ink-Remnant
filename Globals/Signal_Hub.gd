@@ -11,6 +11,7 @@ signal hometoggle(toggle: bool)
 signal state_loaded()
 signal job_complete(completed: Job)
 signal res_max_got(res_type: Currency, max: int)
+signal volume_set(new_vol: float, mute: bool)
 
 func update_resources(res_type: String, res_amount: int):
 	resource_updated.emit(res_type, res_amount)

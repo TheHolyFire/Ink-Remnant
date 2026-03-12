@@ -4,6 +4,8 @@ var save_name_1: String = "Slot 1"
 var save_name_2: String = "Slot 2"
 var save_name_3: String = "Autosave"
 
+@onready var volume_slider: = %VolumeSlider
+
 
 func save(savename: String):
 	var save_state: SaveState = SaveState.new()
@@ -16,6 +18,9 @@ func save(savename: String):
 	save_state.all_jobs = []
 	for job in JobManager.all_jobs:
 		save_state.all_jobs.append(job.duplicate())
+		
+	#save_state.mute = BackgroundMusicPlayer.stream_paused
+	#save_state.volume = BackgroundMusicPlayer.volume_linear
 	
 	ResourceSaver.save(save_state, "user://" + savename + ".tres")
 	
@@ -40,6 +45,11 @@ func load(savename: String):
 		for job in JobManager.all_jobs:
 			if saved_job.job_name == job.job_name:
 				job.shows_up = saved_job.shows_up
+				
+	#BackgroundMusicPlayer.volume_db = save_state.volume
+	#BackgroundMusicPlayer.stream_paused = save_state.mute
+	
+	SignalHub.volume_set.emit(save_state.volume, save_state.mute)
 	
 	for currency in CurrencyManager.all_currencies:
 		currency.get_max()
