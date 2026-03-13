@@ -6,3 +6,7 @@ func _ready() -> void:
 
 func set_vol(volume: float, _mute: bool):
 	self.value = volume
+
+
+func _on_value_changed(new_value: float) -> void:
+	BackgroundMusicPlayer.volume_linear = new_value

@@ -32,4 +32,5 @@ ExtResource("4_6137h"): 1,
 ExtResource("2_rxyt5"): 1,
 ExtResource("3_8hfi4"): 1
 })
+upper_mask = Array[ExtResource("1_li843")]([ExtResource("8_wtqrm")])
 metadata/_custom_type_script = "uid://chnttjydh538r"

@@ -26,7 +26,7 @@
 [ext_resource type="Script" uid="uid://c554iuqrsupxi" path="res://StartScreen/house_tabs.gd" id="20_4asdo"]
 [ext_resource type="Script" uid="uid://ddubjwaefbdws" path="res://StartScreen/bar_button.gd" id="21_11t3j"]
 [ext_resource type="Shader" uid="uid://dslgj8u3kyl7y" path="res://StartScreen/Backdrop_Shader.tres" id="24_jd06h"]
-[ext_resource type="Script" uid="uid://bdgnjag6q58qk" path="res://Globals/background_music_player.gd" id="27_do1qa"]
+[ext_resource type="Script" uid="uid://w7se8q4yrmtb" path="res://StartScreen/mute_button.gd" id="28_plbck"]
 [ext_resource type="Script" uid="uid://d103c4xklkruj" path="res://StartScreen/volume_slider.gd" id="28_sr1na"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_plbck"]
@@ -431,10 +431,6 @@ patch_margin_top = 16
 patch_margin_right = 16
 patch_margin_bottom = 16
 
-[node name="BackgroundMusicPlayer" type="AudioStreamPlayer2D" parent="MusicCreditsFrame" unique_id=828883346]
-position = Vector2(23, 23)
-script = ExtResource("27_do1qa")
-
 [node name="RichTextLabel" type="RichTextLabel" parent="MusicCreditsFrame" unique_id=354091925]
 layout_mode = 0
 offset_left = 23.0
@@ -465,6 +461,7 @@ offset_top = 54.0
 offset_right = 667.0
 offset_bottom = 100.0
 text = "Mute"
+script = ExtResource("28_plbck")
 
 [connection signal="pressed" from="HouseButton" to="HouseButton" method="_on_pressed"]
 [connection signal="pressed" from="SaveTabFrame/SaveButton1" to="SaveTabFrame/SaveButton1" method="_on_pressed"]
@@ -476,5 +473,5 @@ text = "Mute"
 [connection signal="pressed" from="ThemeControlFrame/LightMode" to="." method="_on_light_mode_pressed"]
 [connection signal="pressed" from="SettingsButton" to="SettingsButton" method="_on_pressed"]
 [connection signal="pressed" from="CityButton" to="CityButton" method="_on_pressed"]
-[connection signal="value_changed" from="MusicCreditsFrame/VolumeSlider" to="MusicCreditsFrame/BackgroundMusicPlayer" method="_on_h_slider_value_changed"]
-[connection signal="toggled" from="MusicCreditsFrame/MuteButton" to="MusicCreditsFrame/BackgroundMusicPlayer" method="_on_button_toggled"]
+[connection signal="value_changed" from="MusicCreditsFrame/VolumeSlider" to="MusicCreditsFrame/VolumeSlider" method="_on_value_changed"]
+[connection signal="toggled" from="MusicCreditsFrame/MuteButton" to="MusicCreditsFrame/MuteButton" method="_on_toggled"]

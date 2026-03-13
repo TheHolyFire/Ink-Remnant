@@ -19,8 +19,8 @@ func save(savename: String):
 	for job in JobManager.all_jobs:
 		save_state.all_jobs.append(job.duplicate())
 		
-	#save_state.mute = BackgroundMusicPlayer.stream_paused
-	#save_state.volume = BackgroundMusicPlayer.volume_linear
+	save_state.mute = BackgroundMusicPlayer.stream_paused
+	save_state.volume = BackgroundMusicPlayer.volume_linear
 	
 	ResourceSaver.save(save_state, "user://" + savename + ".tres")
 	
