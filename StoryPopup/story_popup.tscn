@@ -47,9 +47,8 @@ mouse_filter = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1656925721]
 material = SubResource("ShaderMaterial_wwits")
-offset_left = 1.0
-offset_right = 501.0
-offset_bottom = 298.0
+offset_right = 500.0
+offset_bottom = 300.0
 texture = ExtResource("5_6g6n3")
 patch_margin_left = 16
 patch_margin_top = 16

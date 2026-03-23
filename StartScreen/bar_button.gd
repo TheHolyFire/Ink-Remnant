@@ -142,7 +142,10 @@ func start_filling():
 	current_state = State.FILLING
 	SignalHub.job_begun.emit()
 	progress.value = 0
-	get_tree().call_group("BarButtons", "disable_others", self)
+	#get_tree().call_group("BarButtons", "disable_others", self)
+	get_tree().call_group("BarButtons", "reset_others", self)
+
+	
 	
 	var tween = create_tween()
 	tween.tween_property(progress, "value", 100, job_run.job_duration)
@@ -173,6 +176,11 @@ func reset():
 	progress.value = 0
 	visual_state &= ~VisualState.RUNNING
 	update_visuals()
+
+
+func reset_others(button: BarButton):
+	if button != self:
+		reset()
 
 
 func set_job(job_to_set: Job):
