@@ -62,7 +62,7 @@ func eoc_check() -> bool:
 		return not obj.is_hidden and not obj.name == "Floor Space"
 	)
 	return visible_currencies.all(func(obj: Currency): 
-		print("Checking full" + obj.name + "->" + str(obj.is_full()))
+		#print("Checking full" + obj.name + "->" + str(obj.is_full()))
 		return obj.is_full()
 	)
 

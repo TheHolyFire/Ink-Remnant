@@ -4,6 +4,7 @@ extends Node
 @onready var button_stack_jobs = %"ButtonStackJobs"
 @onready var button_stack_trades = %"ButtonStackTrades"
 @onready var button_stack_upgrades = %"ButtonStackUpgrades"
+@onready var seen_eoc = false
 
 var timer: float = 0.0
 
@@ -82,8 +83,9 @@ func _on_dark_mode_pressed() -> void:
 
 
 func end_of_content(_a = null, _b = null):
-	if CurrencyManager.eoc_check():
-		print("True")
+	
+	if CurrencyManager.eoc_check() and seen_eoc == false:
+		seen_eoc = true
 		var eoc_popup = preload("uid://cxse6vagl4302").instantiate()
 		eoc_popup.label_text = "If you're seeing this, you've reached the end of the current content. Thanks for playing, I hope you had fun! Check back in a few weeks, I'll probably have added more."
 		eoc_popup.button_text = "One more click..."
