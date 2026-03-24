@@ -58,11 +58,10 @@ extends Node
 
 func eoc_check() -> bool:
 	var visible_currencies = all_currencies.filter(func(obj: Currency): 
-		#print("Checking hidden" + obj.name + "->" + str(obj.is_hidden))
-		return not obj.is_hidden and not obj.name == "Floor Space"
+
+		return not obj.is_hidden and not obj.name == "Floor Space" and not obj.name == "Magic" and not obj.name == "Research"
 	)
 	return visible_currencies.all(func(obj: Currency): 
-		#print("Checking full" + obj.name + "->" + str(obj.is_full()))
 		return obj.is_full()
 	)
 

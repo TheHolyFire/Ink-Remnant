@@ -9,7 +9,9 @@ var currency_name: String = "None"
 
 
 func _ready() -> void:
-	pass
+	if not label_type.makes_label:
+		mouse_filter = Control.MOUSE_FILTER_STOP
+	SignalHub.resource_updated.connect(update_tooltip)
 
 
 func text_set(currency: Currency):
@@ -67,3 +69,26 @@ func spawn_neg_popup(txt_amount: int):
 	tween.tween_property(popup, "position", popup.position + Vector2(30, 10), 0.6)
 	tween.parallel().tween_property(popup, "modulate:a", 0.0, 0.6)
 	tween.tween_callback(popup.queue_free)
+	
+
+func update_tooltip(_a = null, _b = null):
+	var line: String = ""
+	
+	if label_type.is_ticker:
+		for type in label_type.tick_types: 
+				line += str(label_type.tick_types[type] * label_type.get_amount()) + " " + type.name + " per second"
+	
+	if label_type.is_upgrade:
+		for upgrades in label_type.upgrade_target: 
+			line += "Adds " + str(label_type.upgrade_target[upgrades] * label_type.get_amount()) + " " + str(upgrades.name) + " capacity"
+	tooltip_text = line
+	
+func _make_custom_tooltip(for_text):
+	var label = RichTextLabel.new()
+	label.bbcode_enabled = true
+	label.fit_content = true
+	label.text = for_text
+	label.fit_content = true
+	label.autowrap_mode = TextServer.AUTOWRAP_OFF
+	label.fit_content = true
+	return label

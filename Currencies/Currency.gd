@@ -60,3 +60,6 @@ func get_max() -> int:
 			base += currency.upgrade_target[self] * currency.amount
 			SignalHub.res_max_got.emit.call_deferred(self, base)
 	return base
+
+func get_amount() -> int:
+	return amount

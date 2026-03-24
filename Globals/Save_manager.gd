@@ -53,3 +53,11 @@ func load(savename: String):
 		
 	SignalHub.display.emit("Game loaded: " + savename + "\n\n")
 	SceneManager.set_scene(SceneManager.Scene.CITY)
+
+func _notification(what):
+	match what:
+		NOTIFICATION_APPLICATION_FOCUS_OUT:
+			# window lost focus - keep running but maybe throttle fps
+			Engine.max_fps = 10  # optional, saves CPU
+		NOTIFICATION_APPLICATION_FOCUS_IN:
+			Engine.max_fps = 60  # 0 = unlimited, back to normal

@@ -538,6 +538,7 @@ anchor_right = 0.20390625
 anchor_bottom = 0.98194444
 size_flags_horizontal = 0
 size_flags_vertical = 3
+mouse_filter = 1
 texture = ExtResource("19_ptm2y")
 patch_margin_left = 16
 patch_margin_top = 16

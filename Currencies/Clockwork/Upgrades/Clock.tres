@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_gjg21")
-name = "Clocks"
+name = "Clock"
 max_amount = 2
 tick_types = null
 is_upgrade = true

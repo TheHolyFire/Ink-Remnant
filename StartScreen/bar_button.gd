@@ -22,13 +22,15 @@ var visual_state: int = VisualState.NORMAL
 var current_state = State.IDLE
 
 @export var job_run: Job
+@export var story_box: RichTextLabel
 
 @onready var startrun: bool = true
-@onready var progress = ProgressBar.new()
-@onready var border = NinePatchRect.new()
-@onready var ready_label = RichTextLabel.new()
-@onready var new_label = RichTextLabel.new()
-@onready var parent = $".."
+@onready var progress: ProgressBar = ProgressBar.new()
+@onready var border: NinePatchRect = NinePatchRect.new()
+@onready var ready_label: RichTextLabel = RichTextLabel.new()
+@onready var new_label: RichTextLabel = RichTextLabel.new()
+@onready var parent: Node = $".."
+@onready var tween: Tween
 
 
 func _ready():
@@ -134,6 +136,7 @@ func start_filling():
 		reset()
 		return
 	if startrun == true:
+		get_tree().call_group("BarButtons", "reset_others", self)
 		SignalHub.display.emit(job_run.job_desc + "\n")
 		startrun = false
 	visual_state |= VisualState.RUNNING
@@ -142,12 +145,8 @@ func start_filling():
 	current_state = State.FILLING
 	SignalHub.job_begun.emit()
 	progress.value = 0
-	#get_tree().call_group("BarButtons", "disable_others", self)
-	get_tree().call_group("BarButtons", "reset_others", self)
-
 	
-	
-	var tween = create_tween()
+	tween = create_tween()
 	tween.tween_property(progress, "value", 100, job_run.job_duration)
 	await tween.finished
 	
@@ -180,6 +179,9 @@ func reset():
 
 func reset_others(button: BarButton):
 	if button != self:
+		if tween and tween.is_running():
+			tween.kill()
+			SignalHub.display.emit("Left early...\n\n")
 		reset()
 
 
@@ -196,34 +198,40 @@ func check_visible(_resource, _amount):
 
 
 func update_tooltip():
+	
 	var line: String = "[color=white]Required:\n[/color]"
+	
 	for price in job_run.job_cost:
 		if price.is_affordable(job_run.job_cost[price]):
 			line += " [color=pale_green]" + str(job_run.job_cost[price]) + " " + price.name + ",[/color]\n"
 		else: 
 			line += " [color=dark_red]" + str(job_run.job_cost[price]) + " " + price.name + ",[/color]\n"
+	
 	if job_run.make_tooltip == true:
 		for price in job_run.upper_mask:
-			line += "[color=white]Max: " + str(price.amount) + "/" + str(price.max_amount) + "[/color]"
-	line += "\n" + "[color=white]Rewards:\n[/color]"
+			line += "[color=white]Max: " + str(price.amount) + "/" + str(price.max_amount) + "[/color]\n"
+	
+	line += "[color=white]Rewards:\n[/color]"
+	
 	for price in job_run.job_reward:
 		if price.is_hidden:
-			return
-		if price.is_full(): 
-			line += "[color=dark_red]" + str(job_run.job_reward[price]) + " " + price.name + ",[/color]"
-		else: 
-			line += "[color=pale_green]" + str(job_run.job_reward[price]) + " " + price.name + ",[/color]"
+			continue
+		if price.is_full() and not price.name == "Floor Space":
+			line += "[color=dark_red]" + str(job_run.job_reward[price]) + " " + price.name + ",[/color]\n"
+		elif not price.is_full() and not price.name == "Floor Space":
+			line += "[color=pale_green]" + str(job_run.job_reward[price]) + " " + price.name + ",[/color]\n"
+		
 		if price.name == "Floor Space":
-			line += "\n" + "[color=white]Floor Space: " + str(job_run.job_reward[price]) + "[/color]"# + "/" + str(price.max_amount)
+			line += "[color=white]Floor Space: " + str(job_run.job_reward[price]) + "[/color]"# + "/" + str(price.max_amount)
 		
 	tooltip_text = line
 	
-func disable_others(button: BarButton):
-	if button != self:
-		disabled = true
-		visual_state |= VisualState.DISABLED
-		visual_state &= ~VisualState.NORMAL
-		update_visuals()
+#func disable_others(button: BarButton):
+	#if button != self:
+		#disabled = true
+		#visual_state |= VisualState.DISABLED
+		#visual_state &= ~VisualState.NORMAL
+		#update_visuals()
 
 func enable_self():
 	disabled = false
