@@ -81,6 +81,10 @@ func update_tooltip(_a = null, _b = null):
 	if label_type.is_upgrade:
 		for upgrades in label_type.upgrade_target: 
 			line += "Adds " + str(label_type.upgrade_target[upgrades] * label_type.get_amount()) + " " + str(upgrades.name) + " capacity"
+	
+	if label_type.make_tooltip:
+		line += label_type.tooltip_says
+	
 	tooltip_text = line
 	
 func _make_custom_tooltip(for_text):

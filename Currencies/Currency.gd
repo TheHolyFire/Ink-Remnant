@@ -12,7 +12,8 @@ class_name Currency
 @export var has_been_seen: bool = false
 @export var upgrade_target: Dictionary[Currency,int]
 @export var is_hidden: bool = false
-#@export var make_tooltip: bool = true
+@export var make_tooltip: bool = false
+@export var tooltip_says: String = "Replace this"
 
 var base: int 
 
