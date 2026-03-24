@@ -155,11 +155,12 @@ func start_filling():
 
 	if not job_run.repeats:
 		self.button_pressed = false
-	
-	if self.button_pressed == true:
+
+	if self.button_pressed == true and JobManager.jobs_repeat == true:
 		start_filling()
 		SignalHub.job_complete.emit(job_run)
-	if self.button_pressed == false:
+
+	if self.button_pressed == false or JobManager.jobs_repeat == false:
 		SignalHub.display.emit(job_run.job_story + "\n\n")
 		SignalHub.job_complete.emit(job_run)
 		current_state = State.COMPLETE

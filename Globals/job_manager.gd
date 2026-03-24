@@ -1,5 +1,7 @@
 extends Node
 
+@onready var jobs_repeat: bool = true
+
 var simple_jobs: Array[Job] = [
 	load("res://Currencies/Herbs/Gather_Herbs.tres"),
 	load("res://Currencies/Coins/Shovel.tres"),

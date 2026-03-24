@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://n5c0w6akhri4"]
+
+[ext_resource type="Script" uid="uid://cvrvuiddn6rg" path="res://SavePopup/copy_save_window.gd" id="1_4436o"]
+[ext_resource type="Shader" uid="uid://dslgj8u3kyl7y" path="res://StartScreen/Backdrop_Shader.tres" id="1_p3mtb"]
+[ext_resource type="Texture2D" uid="uid://ghf4w0mqty8t" path="res://Borders/Settings_Border.png" id="3_selna"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6yjd6"]
+shader = ExtResource("1_p3mtb")
+
+[node name="CopySaveWindow" type="Window" unique_id=642060012]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(500, 300)
+borderless = true
+script = ExtResource("1_4436o")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1711300179]
+material = SubResource("ShaderMaterial_6yjd6")
+offset_right = 500.0
+offset_bottom = 300.0
+
+[node name="Border" type="NinePatchRect" parent="." unique_id=416963458]
+offset_right = 500.0
+offset_bottom = 300.0
+texture = ExtResource("3_selna")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="SaveString" type="TextEdit" parent="." unique_id=1218171428]
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 489.0
+offset_bottom = 221.0
+autowrap_mode = 1
+
+[node name="Copy" type="Button" parent="." unique_id=965629940]
+offset_left = 11.0
+offset_top = 231.0
+offset_right = 244.0
+offset_bottom = 285.0
+text = "Copy to Clipboard"
+
+[node name="Close" type="Button" parent="." unique_id=221480319]
+offset_left = 251.0
+offset_top = 231.0
+offset_right = 487.0
+offset_bottom = 285.0
+text = "Close"
+
+[connection signal="pressed" from="Copy" to="." method="_on_copy_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
