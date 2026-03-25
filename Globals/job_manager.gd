@@ -56,19 +56,28 @@ var house_jobs: Array[Job] = [
 	load("res://Currencies/Houses/Make_Dimension_Rift.tres")
 ]
 
-var library_jobs: Array[Job] = [
+var curator_jobs: Array[Job] = [
 	load("res://Currencies/Library/DiscoverLibrary.tres"),
 	load("res://Currencies/Library/Get_Library_Card.tres"),
-	load("res://Currencies/Library/Research_Lapidamancy.tres"),
-	load("res://Currencies/Library/Research_Octomancy.tres"),
-	load("res://Currencies/Library/Research_Cyanomancy.tres"),
-	load("res://Currencies/Library/Research_The_City.tres"),
-	load("res://Currencies/Library/Offer_Kingly_Blue.tres"),
 	load("res://Currencies/Library/Speak_with_Curator.tres"),
 	load("res://Currencies/Library/Speak_with_Curator_2.tres"),
 	load("res://Currencies/Library/Speak_with_Curator_3.tres"),
+	load("res://Currencies/Library/Offer_Kingly_Blue.tres"),
+]
+
+var librarian_jobs: Array[Job] = [
 	load("res://Currencies/Library/Speak_with_librarian.tres"),
 	load("res://Currencies/Library/Speak_with_librarian2.tres"),
+	load("res://Currencies/Library/Speak_with_librarian3.tres"), 
+	load("res://Currencies/Library/Speak_with_librarian4.tres"),
+]
+
+var research_book_jobs: Array[Job] = [
+	load("res://Currencies/Library/Research_The_City.tres"),
+	load("res://Currencies/Library/Research_Octomancy.tres"),
+	load("res://Currencies/Library/Research_Lapidamancy.tres"),
+	load("res://Currencies/Library/Research_Cyanomancy.tres"),
+	load("res://Currencies/Library/Research_Oneiromancy.tres"),
 ]
 
 var tower_jobs: Array[Job] = [
@@ -76,4 +85,12 @@ var tower_jobs: Array[Job] = [
 	load("res://Currencies/Tower/Forge_Through.tres"),
 ]
 
-var all_jobs: Array[Job] = (tickers + upgrades + trades + simple_jobs + house_jobs + library_jobs + tower_jobs)
+var all_jobs: Array[Job] = (tickers + 
+upgrades + 
+trades + 
+simple_jobs + 
+house_jobs + 
+curator_jobs +
+librarian_jobs + 
+research_book_jobs +
+tower_jobs)

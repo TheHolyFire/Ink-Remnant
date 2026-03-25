@@ -4,6 +4,10 @@ extends Node
 @onready var button_stack_jobs = %"ButtonStackJobs"
 @onready var button_stack_trades = %"ButtonStackTrades"
 @onready var button_stack_upgrades = %"ButtonStackUpgrades"
+@onready var button_stack_curator = %"ButtonStackCurator"
+@onready var button_stack_librarian = %"ButtonStackLibrarian"
+@onready var button_stack_books = %"ButtonStackBooks"
+
 @onready var seen_eoc = false
 
 var timer: float = 0.0
@@ -15,6 +19,9 @@ func _ready():
 	button_stack_jobs.populate(JobManager.simple_jobs)
 	button_stack_trades.populate(JobManager.trades)
 	button_stack_upgrades.populate(JobManager.upgrades + JobManager.tickers)
+	button_stack_curator.populate(JobManager.curator_jobs)
+	button_stack_librarian.populate(JobManager.librarian_jobs)
+	button_stack_books.populate(JobManager.research_book_jobs)
 	
 	var starting_popup = story_popup.instantiate()
 	starting_popup.label_text = "You're a homeless waif in a magical city. The only way to go from here is up!"

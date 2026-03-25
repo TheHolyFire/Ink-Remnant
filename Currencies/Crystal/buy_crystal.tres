@@ -23,4 +23,5 @@ ExtResource("2_n8frf"): 5
 })
 upper_mask = Array[ExtResource("1_0biky")]([ExtResource("5_0xf0q")])
 make_tooltip = false
+button_signal = null
 metadata/_custom_type_script = "uid://chnttjydh538r"
